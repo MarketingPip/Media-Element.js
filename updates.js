@@ -2,6 +2,8 @@
 import "https://polyfill.io/v3/polyfill.js?features=Array.prototype.map,fetch,Promise";
 import "https://unpkg.com/construct-style-sheets-polyfill";
 
+
+ 
 const mainSheet = new CSSStyleSheet()
 mainSheet.replaceSync(`/*compress*/
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
@@ -373,7 +375,7 @@ if (this.type){
 
       
       
-    if(typeof TheMovieDB_APIKey === 'undefined' && (this.type === 'tv' || this.type === 'film')){
+    if(typeof TheMovieDB_APIKey === 'undefined' && (this.type === 'tv' || this.type === 'film' || this.type === "episode")){
       this.populateError({
         status_message: 'Please provide an API Key'
       })
